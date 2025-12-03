@@ -20,7 +20,7 @@ const Header = () => {
           <div className="w-11 h-11 bg-primary rounded-lg flex items-center justify-center shadow-lg">
             <span className="text-primary-foreground font-bold text-xl">D</span>
           </div>
-          <span className="text-2xl font-bold text-foreground tracking-tight">Data Orbit</span>
+          <span className="text-2xl font-logo font-extrabold text-foreground tracking-tight">Data Orbit</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

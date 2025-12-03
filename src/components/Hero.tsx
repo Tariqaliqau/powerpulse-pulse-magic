@@ -26,7 +26,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="rounded-xl overflow-hidden shadow-2xl border border-border/50">
+          <div className="overflow-hidden shadow-2xl border border-border/50">
             <img
               src={dashboardPreview}
               alt="Power BI Sales Analysis Dashboard showing charts and KPIs"

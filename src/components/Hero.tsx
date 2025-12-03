@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import dashboardPreview from "@/assets/dashboard-preview.gif";
 
 const Hero = () => {
   return (
@@ -25,10 +26,10 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="rounded-lg overflow-hidden shadow-2xl">
+          <div className="rounded-xl overflow-hidden shadow-2xl border border-border/50">
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
-              alt="Business analytics team reviewing Power BI dashboards"
+              src={dashboardPreview}
+              alt="Power BI Sales Analysis Dashboard showing charts and KPIs"
               className="w-full h-auto object-cover"
             />
           </div>

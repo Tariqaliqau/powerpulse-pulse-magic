@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import dashboardPreview from "@/assets/dashboard-preview.gif";
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center pt-20">
+  return <section id="home" className="min-h-screen flex items-center pt-20">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p className="text-primary font-medium tracking-wide uppercase text-sm">
@@ -27,16 +25,10 @@ const Hero = () => {
         </div>
         <div className="relative">
           <div className="overflow-hidden shadow-2xl border border-border/50">
-            <img
-              src={dashboardPreview}
-              alt="Power BI Sales Analysis Dashboard showing charts and KPIs"
-              className="w-full h-auto object-cover"
-            />
+            <img src={dashboardPreview} alt="Power BI Sales Analysis Dashboard showing charts and KPIs" className="w-full h-auto object-contain shadow" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

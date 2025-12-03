@@ -16,11 +16,11 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">D</span>
+        <a href="#home" className="flex items-center gap-3">
+          <div className="w-11 h-11 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+            <span className="text-primary-foreground font-bold text-xl">D</span>
           </div>
-          <span className="text-xl font-semibold text-foreground">Data Orbit</span>
+          <span className="text-2xl font-bold text-foreground tracking-tight">Data Orbit</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

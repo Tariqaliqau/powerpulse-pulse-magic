@@ -17,11 +17,18 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const subject = encodeURIComponent(`Contact Form: ${formData.service || 'General Inquiry'}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nService: ${formData.service || 'Not specified'}\n\nMessage:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:tariqali.qau92@gmail.com?subject=${subject}&body=${body}`;
+    
     toast({
-      title: "Request Sent!",
-      description: "We'll get back to you within 24 hours.",
+      title: "Opening Email Client",
+      description: "Your email client will open with the message pre-filled.",
     });
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
 
   return (

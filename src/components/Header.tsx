@@ -37,8 +37,8 @@ const Header = () => {
             </a>)}
         </nav>
 
-        <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
-          Get Free Consultation
+        <Button asChild className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
+          <a href="mailto:tariqali.qau92@gmail.com?subject=Free Consultation Request">Get Free Consultation</a>
         </Button>
 
         <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -51,8 +51,8 @@ const Header = () => {
             {navLinks.map(link => <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsMenuOpen(false)}>
                 {link.label}
               </a>)}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
-              Get Free Consultation
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
+              <a href="mailto:tariqali.qau92@gmail.com?subject=Free Consultation Request">Get Free Consultation</a>
             </Button>
           </nav>
         </div>}

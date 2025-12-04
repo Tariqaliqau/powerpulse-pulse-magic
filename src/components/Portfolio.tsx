@@ -1,66 +1,83 @@
 import { useState } from "react";
 import { ExternalLink, X } from "lucide-react";
 
+import googleAds from "@/assets/portfolio/google-ads.png";
+import greenTaxi from "@/assets/portfolio/green-taxi.png";
+import inventory from "@/assets/portfolio/inventory.png";
+import manufacturing from "@/assets/portfolio/manufacturing.png";
+import poAnalysis from "@/assets/portfolio/po-analysis.png";
+import sales from "@/assets/portfolio/sales.png";
+import shipmentAnalysis from "@/assets/portfolio/shipment-analysis.png";
+import salesAnalysis from "@/assets/portfolio/sales-analysis.png";
+import trainingAnalysis from "@/assets/portfolio/training-analysis.webp";
+
 const portfolioItems = [
   {
     id: 1,
-    title: "Sales Analytics Dashboard",
+    title: "Google Ads & Analytics Dashboard",
     category: "Power BI",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    description: "Comprehensive sales dashboard with KPIs, trends, and regional performance metrics.",
+    image: googleAds,
+    description: "Comprehensive Google Ads and Analytics dashboard tracking users, sessions, impressions, clicks, CPC, and conversion costs across multiple campaigns.",
   },
   {
     id: 2,
-    title: "Financial Reporting Suite",
-    category: "Microsoft Fabric",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    description: "End-to-end financial reporting with real-time data integration.",
+    title: "Green Taxi Trips Analysis",
+    category: "Power BI",
+    image: greenTaxi,
+    description: "NYC Green Taxi analysis dashboard with trip metrics, fare analysis, payment types, pickup/dropoff zones, and time-based trip patterns.",
   },
   {
     id: 3,
-    title: "Supply Chain Analytics",
-    category: "Power BI",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
-    description: "Inventory tracking, supplier performance, and logistics optimization.",
+    title: "Inventory Analysis Report",
+    category: "Data Integration",
+    image: inventory,
+    description: "End-to-end inventory management dashboard tracking stock positions, inventory turnover, best sellers, and insufficient inventory items.",
   },
   {
     id: 4,
-    title: "HR Analytics Platform",
-    category: "Data Integration",
-    image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&h=400&fit=crop",
-    description: "Employee metrics, retention analysis, and workforce planning tools.",
+    title: "Manufacturing Dashboard",
+    category: "Microsoft Fabric",
+    image: manufacturing,
+    description: "Production analytics dashboard monitoring items completed, scrap rates, rejects, shortages, and shop order status by item and location.",
   },
   {
     id: 5,
-    title: "Marketing Performance",
+    title: "PO Analysis Report",
     category: "Advanced Analytics",
-    image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?w=600&h=400&fit=crop",
-    description: "Campaign tracking, ROI analysis, and customer segmentation.",
+    image: poAnalysis,
+    description: "Purchase order analytics with PO trends, sector analysis, customer type breakdown, sales performance, and invoice tracking.",
   },
   {
     id: 6,
-    title: "Operations Dashboard",
+    title: "Sales Analysis Report",
     category: "Power BI",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    description: "Real-time operational metrics and process efficiency tracking.",
+    image: sales,
+    description: "Sales performance dashboard with order tracking, gross margin analysis, sales trends, city-wise distribution, and top customer insights.",
   },
   {
     id: 7,
-    title: "Customer Insights",
-    category: "Data Modeling",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    description: "Customer behavior analysis and predictive churn modeling.",
+    title: "Shipment Analysis",
+    category: "Data Integration",
+    image: shipmentAnalysis,
+    description: "Logistics and shipment tracking dashboard with backorder trends, delivery performance, lead time analysis, and return rate metrics.",
   },
   {
     id: 8,
-    title: "Executive Summary",
-    category: "Microsoft Fabric",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop",
-    description: "C-level dashboard with high-level KPIs and business health metrics.",
+    title: "Sales Analysis Dashboard",
+    category: "Power BI",
+    image: salesAnalysis,
+    description: "Automotive sales analysis with brand performance, sales funnel, branch comparisons, and integrated Monday.com task board.",
+  },
+  {
+    id: 9,
+    title: "Training Analysis Report",
+    category: "Advanced Analytics",
+    image: trainingAnalysis,
+    description: "HR training analytics tracking participants by month, training type, location, division, team, and leadership breakdown.",
   },
 ];
 
-const categories = ["All", "Power BI", "Microsoft Fabric", "Data Integration", "Advanced Analytics", "Data Modeling"];
+const categories = ["All", "Power BI", "Microsoft Fabric", "Data Integration", "Advanced Analytics"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -101,14 +118,14 @@ const Portfolio = () => {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedItem(item)}
               className="group cursor-pointer bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg"
             >
-              <div className="relative overflow-hidden aspect-[3/2]">
+              <div className="relative overflow-hidden aspect-[16/10]">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -133,14 +150,14 @@ const Portfolio = () => {
             onClick={() => setSelectedItem(null)}
           >
             <div
-              className="bg-card rounded-lg max-w-3xl w-full max-h-[90vh] overflow-auto"
+              className="bg-card rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
                 <img
                   src={selectedItem.image}
                   alt={selectedItem.title}
-                  className="w-full aspect-video object-cover"
+                  className="w-full object-contain max-h-[60vh]"
                 />
                 <button
                   onClick={() => setSelectedItem(null)}

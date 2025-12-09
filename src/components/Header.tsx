@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
           <Logo className="w-14 h-14" />
-          <span className="text-3xl font-logo font-extrabold text-foreground tracking-tight">insightX</span>
+          <span className="text-3xl font-logo font-extrabold tracking-tight bg-[var(--gradient-logo)] bg-clip-text text-transparent">insightX</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

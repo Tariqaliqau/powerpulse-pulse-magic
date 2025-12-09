@@ -24,8 +24,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="overflow-hidden shadow-2xl border border-border/50">
-            <img src={dashboardPreview} alt="Power BI Sales Analysis Dashboard showing charts and KPIs" className="w-full h-auto object-contain shadow" />
+          <div className="overflow-hidden shadow-2xl border border-border/50 aspect-video">
+            <img src={dashboardPreview} alt="Power BI Sales Analysis Dashboard showing charts and KPIs" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

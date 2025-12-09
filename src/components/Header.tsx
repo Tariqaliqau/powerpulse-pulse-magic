@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
@@ -25,9 +26,7 @@ const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
-          <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center shadow-lg">
-            <span className="text-primary-foreground font-bold text-2xl">I</span>
-          </div>
+          <Logo className="w-14 h-14" />
           <span className="text-3xl font-logo font-extrabold text-foreground tracking-tight">Insightx</span>
         </a>
 

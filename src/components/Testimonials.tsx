@@ -2,17 +2,17 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "DataVision Pro transformed our reporting process completely. Their Power BI dashboards reduced our monthly reporting time by 80%. The team is incredibly professional and their expertise in Microsoft Fabric helped us consolidate all our data sources seamlessly.",
+    quote: "insightX transformed our reporting process completely. Their Power BI dashboards reduced our monthly reporting time by 80%. The team is incredibly professional and their expertise in Microsoft Fabric helped us consolidate all our data sources seamlessly.",
     name: "Sarah Mitchell",
     role: "CFO, TechCorp Industries",
   },
   {
-    quote: "Working with DataVision Pro has been a game-changer. They delivered an enterprise-grade analytics solution that our entire organization now relies on. Their attention to detail and understanding of our business needs exceeded our expectations.",
+    quote: "Working with insightX has been a game-changer. They delivered an enterprise-grade analytics solution that our entire organization now relies on. Their attention to detail and understanding of our business needs exceeded our expectations.",
     name: "Michael Chen",
     role: "Data Director, Global Retail Co",
   },
   {
-    quote: "We were recommended to DataVision Pro by a partner company. Since retaining them, they have managed our entire BI infrastructure. Their hands-on approach has made a real difference. If you want to take your data analytics to the next level, these are the experts to call.",
+    quote: "We were recommended to insightX by a partner company. Since retaining them, they have managed our entire BI infrastructure. Their hands-on approach has made a real difference. If you want to take your data analytics to the next level, these are the experts to call.",
     name: "Jennifer Adams",
     role: "VP Operations, HealthFirst",
   },

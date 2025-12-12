@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoFull from "@/assets/logo-full.png";
+import logoIcon from "@/assets/logo-icon.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
@@ -24,9 +24,9 @@ const Header = () => {
     label: "Contact"
   }];
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#home" className="flex items-center">
-          <img src={logoFull} alt="insightX" className="h-10" />
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+        <a href="#home" className="flex items-center -my-4">
+          <img src={logoIcon} alt="insightX" className="h-16 w-16 rounded-lg" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

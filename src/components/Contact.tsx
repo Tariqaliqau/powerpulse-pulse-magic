@@ -23,7 +23,7 @@ const Contact = () => {
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nService: ${formData.service || 'Not specified'}\n\nMessage:\n${formData.message}`
     );
     
-    window.location.href = `mailto:tariqali.qau92@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@inxightx.com?subject=${subject}&body=${body}`;
     
     toast({
       title: "Opening Email Client",

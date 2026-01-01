@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+
 
 const testimonials = [
   {
@@ -33,9 +33,8 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 relative overflow-hidden"
+              className="bg-card border border-border rounded-lg p-6"
             >
-              <Quote className="w-8 h-8 text-primary/20 absolute top-4 right-4" />
               <p className="text-muted-foreground mb-6 relative z-10">
                 {testimonial.quote}
               </p>

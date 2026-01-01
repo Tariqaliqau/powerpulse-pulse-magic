@@ -35,7 +35,7 @@ const Testimonials = () => {
               key={index}
               className="bg-card border border-border rounded-lg p-6 relative"
             >
-              <Quote className="w-8 h-8 text-primary/30 absolute top-6 right-6" />
+              <Quote className="w-8 h-8 text-primary/20 absolute -top-2 -right-2" />
               <p className="text-muted-foreground mb-6 relative z-10">
                 {testimonial.quote}
               </p>

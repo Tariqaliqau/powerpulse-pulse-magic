@@ -15,11 +15,11 @@ const Hero = () => {
             Transform your raw data into actionable insights with our expert Power BI and Microsoft Fabric consulting services. We help businesses make data-driven decisions that drive growth and success.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6">
-              Get Free Consultation
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6">
+              <a href="mailto:info@inxightx.com?subject=Free Consultation Request">Get Free Consultation</a>
             </Button>
-            <Button variant="outline" className="border-border text-foreground hover:bg-secondary px-8 py-6">
-              Schedule a Call
+            <Button asChild variant="outline" className="border-border text-foreground hover:bg-secondary px-8 py-6">
+              <a href="mailto:info@inxightx.com?subject=Schedule a Call">Schedule a Call</a>
             </Button>
           </div>
         </div>

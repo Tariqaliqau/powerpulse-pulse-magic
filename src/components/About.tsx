@@ -5,7 +5,7 @@ const About = () => {
     <section id="about" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <p className="text-primary font-medium mb-2">Power BI & Fabric Experts</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Hello!</h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8">Hello!</h2>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

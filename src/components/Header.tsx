@@ -36,7 +36,7 @@ const Header = () => {
         </nav>
 
         <Button asChild className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
-          <a href="mailto:tariqali.qau92@gmail.com?subject=Free Consultation Request">Get Free Consultation</a>
+          <a href="mailto:info@inxightx.com?subject=Free Consultation Request">Get Free Consultation</a>
         </Button>
 
         <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -50,7 +50,7 @@ const Header = () => {
                 {link.label}
               </a>)}
             <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
-              <a href="mailto:tariqali.qau92@gmail.com?subject=Free Consultation Request">Get Free Consultation</a>
+              <a href="mailto:info@inxightx.com?subject=Free Consultation Request">Get Free Consultation</a>
             </Button>
           </nav>
         </div>}

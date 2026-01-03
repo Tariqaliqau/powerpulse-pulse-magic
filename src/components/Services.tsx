@@ -63,8 +63,8 @@ const Services = () => {
               key={index}
               className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors group"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-8 h-8 text-primary" />
+              <div className="w-20 h-20 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="w-10 h-10 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {service.title}

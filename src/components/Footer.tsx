@@ -12,7 +12,7 @@ const Footer = () => {
           info@inxightx.com
         </a>
         <p className="text-muted-foreground text-sm">
-          © {new Date().getFullYear()} Data Orbit. All rights reserved.
+          © {new Date().getFullYear()} insightX. All rights reserved.
         </p>
       </div>
     </footer>

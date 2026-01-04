@@ -1,44 +1,53 @@
 import { BarChart3, Database, Layers, Brain, FileText, Shield, GitBranch, GraduationCap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: BarChart3,
     title: "Power BI Development",
+    slug: "power-bi-development",
     description: "Custom Power BI dashboards and reports that transform your data into visual insights. Interactive visualizations tailored to your business needs.",
   },
   {
     icon: Layers,
     title: "Microsoft Fabric",
+    slug: "microsoft-fabric",
     description: "End-to-end analytics platform implementation. Unified data lake, data engineering, data science, and business intelligence in one platform.",
   },
   {
     icon: Database,
     title: "Data Integration",
+    slug: "data-integration",
     description: "Seamless integration of data from multiple sources. ETL pipelines, data warehousing, and real-time data connectivity solutions.",
   },
   {
     icon: Brain,
     title: "Advanced Analytics",
+    slug: "advanced-analytics",
     description: "Predictive analytics, machine learning models, and AI-powered insights to help you stay ahead of the competition.",
   },
   {
     icon: FileText,
     title: "Report Migration",
+    slug: "report-migration",
     description: "Migrate your legacy reports to Power BI. We handle SSRS, Excel, and other reporting tools migration with zero data loss.",
   },
   {
     icon: Shield,
     title: "Power BI Administration",
+    slug: "power-bi-administration",
     description: "Workspace management, security setup, row-level security, and governance best practices for enterprise deployments.",
   },
   {
     icon: GitBranch,
     title: "Data Modeling",
+    slug: "data-modeling",
     description: "Optimized data models for performance. Star schema design, DAX calculations, and semantic layer development.",
   },
   {
     icon: GraduationCap,
     title: "Training & Support",
+    slug: "training-support",
     description: "Empower your team with Power BI and Fabric training. Ongoing support and maintenance to ensure your success.",
   },
 ];
@@ -72,12 +81,12 @@ const Services = () => {
               <p className="text-muted-foreground text-sm mb-4">
                 {service.description}
               </p>
-              <a
-                href="#contact"
+              <Link
+                to={`/services/${service.slug}`}
                 className="text-primary text-sm font-medium hover:underline"
               >
                 Learn more →
-              </a>
+              </Link>
             </div>
           ))}
         </div>

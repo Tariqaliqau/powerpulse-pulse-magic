@@ -15,9 +15,11 @@ const About = () => {
             <p className="text-muted-foreground text-lg">
               We are extremely passionate about what we do and have always put our clients first. From the initial consultation to deployment, our team's uniquely personal attention will keep you in the loop as your analytics solution comes to life.
             </p>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Learn More
-            </Button>
+            <a href="#services">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Learn More
+              </Button>
+            </a>
           </div>
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-2xl">

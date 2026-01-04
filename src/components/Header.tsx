@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import logoFull from "@/assets/logo-full.png";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
@@ -35,9 +37,12 @@ const Header = () => {
             </a>)}
         </nav>
 
-        <Button asChild className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
-          <a href="mailto:info@inxightx.com?subject=Free Consultation Request">Get Free Consultation</a>
-        </Button>
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <a href="mailto:info@inxightx.com?subject=Free Consultation Request">Get Free Consultation</a>
+          </Button>
+        </div>
 
         <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -49,6 +54,10 @@ const Header = () => {
             {navLinks.map(link => <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsMenuOpen(false)}>
                 {link.label}
               </a>)}
+            <div className="flex items-center justify-between pt-2 border-t border-border">
+              <span className="text-muted-foreground text-sm">Theme</span>
+              <ThemeToggle />
+            </div>
             <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 w-full">
               <a href="mailto:info@inxightx.com?subject=Free Consultation Request">Get Free Consultation</a>
             </Button>

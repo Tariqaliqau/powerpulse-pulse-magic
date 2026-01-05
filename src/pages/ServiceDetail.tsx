@@ -194,7 +194,7 @@ const ServiceDetail = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
       <main className="flex-1">
-        <section className="py-20">
+        <section className="pt-28 pb-20">
           <div className="container mx-auto px-4">
             <Link to="/#services" className="inline-flex items-center text-primary hover:underline mb-8">
               <ArrowLeft className="w-4 h-4 mr-2" />

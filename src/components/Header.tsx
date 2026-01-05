@@ -29,7 +29,7 @@ const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img src={logoFull} alt="insightX" className="h-14 w-auto object-contain dark:invert" />
+          <img src={logoFull} alt="insightX" className="h-14 w-auto object-contain dark:brightness-0 dark:invert" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

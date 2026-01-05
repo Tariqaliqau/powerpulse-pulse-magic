@@ -1,5 +1,4 @@
 import { MessageSquare, Clock, Award, BadgeCheck, Users, HeadphonesIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const features = [
   { icon: MessageSquare, label: "Clear communication skills" },
@@ -46,13 +45,7 @@ const WhyUs = () => {
           ))}
         </div>
 
-        <div className="text-center mb-12">
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Learn More
-          </Button>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2">

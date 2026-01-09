@@ -10,6 +10,7 @@ import sales from "@/assets/portfolio/sales.png";
 import shipmentAnalysis from "@/assets/portfolio/shipment-analysis.png";
 import salesAnalysis from "@/assets/portfolio/sales-analysis.png";
 import trainingAnalysis from "@/assets/portfolio/training-analysis.webp";
+import rentDebtAnalysis from "@/assets/portfolio/rent-debt-analysis.png";
 
 const portfolioItems = [
   {
@@ -74,6 +75,20 @@ const portfolioItems = [
     category: "Advanced Analytics",
     image: trainingAnalysis,
     description: "HR training analytics tracking participants by month, training type, location, division, team, and leadership breakdown.",
+  },
+  {
+    id: 10,
+    title: "Rent Debt in America Dashboard",
+    category: "Power BI",
+    image: trainingAnalysis,
+    description: "HR training analytics tracking participants by month, training type, location, division, team, and leadership breakdown.",
+  },
+  {
+    id: 10,
+    title: "Rent Debt in America Dashboard",
+    category: "Power BI",
+    image: rentDebtAnalysis,
+    description: "Comprehensive rent debt analysis dashboard tracking household debt metrics, government rental assistance status, and demographic breakdowns across America.",
   },
 ];
 

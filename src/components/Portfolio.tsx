@@ -133,11 +133,11 @@ const Portfolio = () => {
               onClick={() => setSelectedItem(item)}
               className="group cursor-pointer bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg"
             >
-              <div className="relative overflow-hidden aspect-video bg-muted/30">
+              <div className="relative aspect-[16/9] bg-muted/20 flex items-center justify-center p-2">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain"
                 />
                 <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ExternalLink className="w-8 h-8 text-primary-foreground" />

@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import logoFull from "@/assets/logo-full.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  
   const navLinks = [{
     href: "#home",
     label: "Home"
@@ -26,11 +29,21 @@ const Header = () => {
     href: "#contact",
     label: "Contact"
   }];
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+  };
+
   return <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-background via-background/95 to-primary/10 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <a href="/" onClick={handleLogoClick} className="flex items-center cursor-pointer">
           <img src={logoFull} alt="insightX" className="h-14 w-auto object-contain dark:brightness-0 dark:invert" />
-        </Link>
+        </a>
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(link => <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-base font-semibold text-center">

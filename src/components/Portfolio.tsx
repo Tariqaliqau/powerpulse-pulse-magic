@@ -80,13 +80,6 @@ const portfolioItems = [
     id: 10,
     title: "Rent Debt in America Dashboard",
     category: "Power BI",
-    image: trainingAnalysis,
-    description: "HR training analytics tracking participants by month, training type, location, division, team, and leadership breakdown.",
-  },
-  {
-    id: 10,
-    title: "Rent Debt in America Dashboard",
-    category: "Power BI",
     image: rentDebtAnalysis,
     description: "Comprehensive rent debt analysis dashboard tracking household debt metrics, government rental assistance status, and demographic breakdowns across America.",
   },
@@ -140,11 +133,11 @@ const Portfolio = () => {
               onClick={() => setSelectedItem(item)}
               className="group cursor-pointer bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg"
             >
-              <div className="relative overflow-hidden aspect-[16/10]">
+              <div className="relative overflow-hidden aspect-video bg-muted/30">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <ExternalLink className="w-8 h-8 text-primary-foreground" />

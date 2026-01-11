@@ -1,4 +1,5 @@
 import { MessageSquare, Clock, Award, BadgeCheck, Users, HeadphonesIcon } from "lucide-react";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const features = [
   { icon: MessageSquare, label: "Clear communication skills" },
@@ -9,11 +10,18 @@ const features = [
   { icon: HeadphonesIcon, label: "24/7 customer support" },
 ];
 
-const stats = [
-  { value: "500+", label: "Projects Completed" },
-  { value: "99%", label: "On Time Delivery" },
-  { value: "100%", label: "Client Satisfaction" },
-];
+const AnimatedStat = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+  const { count, ref } = useCountUp({ end, suffix, duration: 2000 });
+  
+  return (
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+        {count}
+      </div>
+      <p className="text-muted-foreground">{label}</p>
+    </div>
+  );
+};
 
 const WhyUs = () => {
   return (
@@ -46,14 +54,9 @@ const WhyUs = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                {stat.value}
-              </div>
-              <p className="text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
+          <AnimatedStat end={500} suffix="+" label="Projects Completed" />
+          <AnimatedStat end={99} suffix="%" label="On Time Delivery" />
+          <AnimatedStat end={100} suffix="%" label="Client Satisfaction" />
         </div>
       </div>
     </section>

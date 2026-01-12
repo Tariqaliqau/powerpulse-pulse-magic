@@ -28,10 +28,6 @@ const Header = () => {
   }, {
     href: "#contact",
     label: "Contact"
-  }, {
-    href: "/blog",
-    label: "Blog",
-    isRoute: true
   }];
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -50,17 +46,9 @@ const Header = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => 
-            'isRoute' in link && link.isRoute ? (
-              <Link key={link.href} to={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-base font-semibold text-center">
-                {link.label}
-              </Link>
-            ) : (
-              <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-base font-semibold text-center">
-                {link.label}
-              </a>
-            )
-          )}
+          {navLinks.map(link => <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-base font-semibold text-center">
+              {link.label}
+            </a>)}
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -77,17 +65,9 @@ const Header = () => {
 
       {isMenuOpen && <div className="md:hidden bg-background border-t border-border">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {navLinks.map(link => 
-              'isRoute' in link && link.isRoute ? (
-                <Link key={link.href} to={link.href} className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsMenuOpen(false)}>
-                  {link.label}
-                </Link>
-              ) : (
-                <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsMenuOpen(false)}>
-                  {link.label}
-                </a>
-              )
-            )}
+            {navLinks.map(link => <a key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsMenuOpen(false)}>
+                {link.label}
+              </a>)}
             <div className="flex items-center justify-between pt-2 border-t border-border">
               <span className="text-muted-foreground text-sm">Theme</span>
               <ThemeToggle />
